@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: fitwhey-fullstack-demo
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/products/my-whey
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: DB_PATH
+        value: /tmp/fitwhey/store.sqlite
