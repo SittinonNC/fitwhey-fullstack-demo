@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fitwhey cart demo">
+  <title>Fitwhey Demo — Cart</title>
+  <link rel="icon" href="./icon.svg">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="cart">
+  <div class="static-note">GitHub Pages Front-end Demo · API และ Transaction อยู่ใน Source Code</div>
+  <div class="announcement"><span>● FITWHEY ORIGINAL SERIES</span><span>จัดส่งฟรีเมื่อครบ ฿1,500</span></div>
+  <header class="header"><div class="header-inner"><a class="wordmark" href="./index.html">FIT<span>WHEY</span><i></i></a><nav><a href="./index.html">สินค้า</a><a class="active" href="./cart.html">ตะกร้า</a></nav><a class="cart-link" href="./cart.html"><span class="cart-label">ตะกร้า</span><span class="cart-count" data-cart-count>0</span></a></div></header>
+
+  <main class="container cart-page">
+    <a class="back-link" href="./index.html">← เลือกสินค้าต่อ</a>
+    <div class="cart-title"><div><span class="eyebrow red">YOUR SELECTION</span><h1>ตะกร้าสินค้า <span data-cart-heading></span></h1></div><div class="checkout-step"><span>01 CART</span><span class="step-divider">—</span><span>02 CHECKOUT</span><span class="step-divider">—</span><span>03 COMPLETE</span></div></div>
+
+    <section class="empty-state" data-empty hidden><div class="empty-icon">▢</div><h1>ตะกร้ายังว่างอยู่</h1><p>เลือก Size และ Flavour ที่ต้องการจากหน้าสินค้า</p><a class="button primary" href="./index.html">เลือกสินค้า</a></section>
+
+    <section class="cart-layout" data-cart-layout hidden>
+      <div>
+        <div class="cart-table-heading"><span>สินค้า</span><span>จำนวน / ราคา</span></div>
+        <div data-cart-items></div>
+        <div class="cart-delivery"><span>▣</span><div><strong>Standard Delivery</strong><p>จัดส่งฟรีเมื่อยอดรวมครบ ฿1,500</p></div><span>✓</span></div>
+        <p class="cart-inventory-note">ⓘ ระบบจริงจะตรวจและจอง Stock อีกครั้งใน PostgreSQL transaction ตอนสร้าง Order</p>
+      </div>
+      <aside class="order-summary">
+        <h2>สรุปคำสั่งซื้อ</h2>
+        <div class="summary-line"><span>ยอดสินค้า</span><strong data-subtotal>฿0</strong></div>
+        <div class="summary-line"><span>ค่าจัดส่ง</span><strong data-shipping>฿0</strong></div>
+        <div class="summary-total"><span>ยอดรวม</span><strong data-total>฿0</strong></div>
+        <p class="summary-caption">รวม VAT แล้ว</p>
+        <button class="button primary checkout-button" type="button" data-checkout>ยืนยันคำสั่งซื้อ →</button>
+        <div class="secure-note">▣ Secure Checkout Demo</div>
+        <div class="demo-note"><strong>Architecture Note</strong><p>เดโม GitHub Pages ทำงานใน Browser ส่วน Source Code มี API, idempotency key และ conditional stock update สำหรับระบบจริง</p></div>
+      </aside>
+    </section>
+
+    <section class="success-card" data-success hidden><div class="success-icon">✓</div><span class="eyebrow red">ORDER COMPLETE</span><h1>สร้างคำสั่งซื้อจำลองสำเร็จ</h1><p>เลขที่คำสั่งซื้อ <strong data-order-number></strong></p><div class="receipt-total"><span>ยอดรวม</span><strong data-success-total></strong></div><a class="button primary" href="./index.html">กลับไปหน้าสินค้า</a></section>
+  </main>
+  <footer class="footer"><a class="wordmark" href="./index.html">FIT<span>WHEY</span><i></i></a><p>© 2026 Fitwhey Full Stack Demo</p><a href="https://github.com/SittinonNC/fitwhey-fullstack-demo">SOURCE CODE ↗</a></footer>
+  <script src="./app.js" defer></script>
+</body>
+</html>

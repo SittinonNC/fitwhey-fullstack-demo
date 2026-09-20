@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fitwhey product variant and cart demo">
+  <title>Fitwhey Demo — Product</title>
+  <link rel="icon" href="./icon.svg">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="product">
+  <div class="static-note">GitHub Pages Front-end Demo · API และ Transaction อยู่ใน Source Code</div>
+  <div class="announcement"><span>● FITWHEY ORIGINAL SERIES</span><span>จัดส่งฟรีเมื่อครบ ฿1,500</span></div>
+  <header class="header">
+    <div class="header-inner">
+      <a class="wordmark" href="./index.html" aria-label="Fitwhey home">FIT<span>WHEY</span><i></i></a>
+      <nav><a class="active" href="./index.html">สินค้า</a><a href="#details">รายละเอียด</a></nav>
+      <a class="cart-link" href="./cart.html" aria-label="ตะกร้าสินค้า"><span class="cart-label">ตะกร้า</span><span class="cart-count" data-cart-count>0</span></a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumb"><a href="./index.html">หน้าแรก</a><span>/</span><strong>FITWHEY ORIGINAL</strong></div>
+    <section class="product-grid">
+      <div>
+        <div class="image-stage">
+          <div class="stage-top"><span class="small-tag">100% WHEY PROTEIN</span><span class="edition">ORIGINAL SERIES</span></div>
+          <div class="stage-title">FIT<span>WHEY</span></div>
+          <img class="product-image" src="./images/product.webp" alt="Fitwhey Original whey protein">
+          <div class="stage-bottom"><span>24G PROTEIN</span><span>QUALITY PERFORMANCE NUTRITION</span></div>
+        </div>
+        <div class="image-caption"><span>ภาพสินค้าใช้เพื่อการสาธิต</span><span>FITWHEY® ORIGINAL</span></div>
+        <div class="product-values">
+          <div><span>✓</span><span>โปรตีนคุณภาพสูง<small>24 กรัมต่อหนึ่งหน่วยบริโภค</small></span></div>
+          <div><span>✓</span><span>เลือก Variant ได้<small>ขนาดและรสชาติสัมพันธ์กับ SKU</small></span></div>
+          <div><span>✓</span><span>ตรวจสอบ Stock<small>ปิดการสั่งซื้อเมื่อสินค้าหมด</small></span></div>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <div class="eyebrow"><span class="brand-badge">FITWHEY</span><span>ORIGINAL SERIES</span></div>
+        <h1>FITWHEY ORIGINAL<span>PREMIUM WHEY PROTEIN</span></h1>
+        <p class="description">ตัวอย่างหน้า Product Detail สำหรับเลือก Size และ Flavour ระบบจะระบุ SKU ราคา และ Stock จาก Variant ที่เลือก</p>
+        <div class="price-row"><strong data-price>฿1,299</strong><span>รวม VAT แล้ว</span></div>
+        <div class="divider"></div>
+
+        <fieldset class="option-group">
+          <legend><span class="step-number">01</span>เลือกขนาด <span class="selected-label" data-size-label>5 LB</span></legend>
+          <div class="size-options">
+            <button class="size-option selected" type="button" data-size="5"><strong>5 LB</strong><small>ประมาณ 70 servings</small></button>
+            <button class="size-option" type="button" data-size="10"><strong>10 LB</strong><small>ประมาณ 140 servings</small></button>
+          </div>
+        </fieldset>
+
+        <fieldset class="option-group">
+          <legend><span class="step-number">02</span>เลือกรสชาติ <span class="selected-label" data-flavour-label>Chocolate</span></legend>
+          <div class="flavour-options">
+            <button class="flavour-option selected" type="button" data-flavour="Choc"><span class="flavour-dot choc"></span>Chocolate</button>
+            <button class="flavour-option" type="button" data-flavour="Vanilla"><span class="flavour-dot vanilla"></span>Vanilla</button>
+            <button class="flavour-option" type="button" data-flavour="Strawberry"><span class="flavour-dot strawberry"></span>Strawberry</button>
+          </div>
+        </fieldset>
+
+        <div class="availability" data-availability><span class="stock-dot"></span><span data-stock>มีสินค้า 12 ชิ้น</span><span class="stock-refresh" data-sku>SKU FW-5-CHO</span></div>
+        <div class="purchase-row">
+          <div class="quantity-control" aria-label="จำนวนสินค้า">
+            <button type="button" data-qty-minus aria-label="ลดจำนวน">−</button><output data-qty>1</output><button type="button" data-qty-plus aria-label="เพิ่มจำนวน">+</button>
+          </div>
+          <button class="button primary" type="button" data-add>เพิ่มลงตะกร้า <span>→</span></button>
+        </div>
+        <button class="button buy-now" type="button" data-buy>ซื้อทันที</button>
+        <p class="cart-hint">เดโมนี้เก็บตะกร้าใน Browser เพื่อให้ทดลอง Flow ได้บน GitHub Pages</p>
+        <div class="shipping-note"><span>▣</span><div><strong>จัดส่งทั่วประเทศไทย</strong><span>ตัวอย่าง UI สำหรับแบบทดสอบ Full Stack Developer</span></div></div>
+      </div>
+    </section>
+
+    <section class="details-section" id="details">
+      <div class="tabs"><button aria-selected="true">รายละเอียด</button><button>โภชนาการ</button><button>การจัดส่ง</button></div>
+      <div class="details-content"><div><span class="eyebrow red">PRODUCT SYSTEM</span><h2>Variant → SKU → Price → Stock</h2></div><p>Size และ Flavour แต่ละคู่ระบุ SKU เดียว ราคาและจำนวนคงเหลือจึงเปลี่ยนตาม Variant เพื่อป้องกันการขายสินค้าผิดรายการ ส่วนระบบจริงอ่านข้อมูลเหล่านี้จากฐานข้อมูลผ่าน API</p></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="wordmark" href="./index.html">FIT<span>WHEY</span><i></i></a><p>© 2026 Fitwhey Full Stack Demo</p><a href="https://github.com/SittinonNC/fitwhey-fullstack-demo">SOURCE CODE ↗</a></footer>
+  <div class="toast" data-toast hidden><span>✓</span><span data-toast-text>เพิ่มสินค้าลงตะกร้าแล้ว</span><a href="./cart.html">ดูตะกร้า</a><button type="button" data-toast-close>×</button></div>
+  <script src="./app.js" defer></script>
+</body>
+</html>
